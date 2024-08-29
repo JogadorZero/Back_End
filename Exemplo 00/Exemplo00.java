@@ -1,9 +1,7 @@
-package org.example;
-
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercicio00 {
+public class Exemplo00 {
     public static void main(String[] args) {
         //String nome = "Lucas";
 

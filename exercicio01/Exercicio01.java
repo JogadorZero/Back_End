@@ -1,6 +1,5 @@
 package main.resources;
 
-
 import java.util.Scanner;
 
 public class Exercicio01 {
@@ -29,7 +28,7 @@ public class Exercicio01 {
                 System.out.println("Gladiador");
                 break;
             } else {
-                System.out.println("!!!!!! Digite apenas 1 ou 2 !!!!!!!");
+                System.out.println("Digite apenas 1 ou 2.");
             }
 
 
