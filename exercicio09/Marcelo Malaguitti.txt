@@ -1,0 +1,9 @@
+Respondendo a segunda questão sobre a palestra de Marcelo Malaguitti, um tipo de ataque conhecido contra sistemas de backend é o ransomware, onde o perpetrador bloqueia os dados ou redes da vítima e exige pagamento para desbloquear o acesso.
+
+Uma empresa que sofreu este tipo de ataque foi a ICBC, um banco chinês, que interrompeu alguns sistemas do banco e atingiu a liquidez dos títulos de Tesouro dos Estados Unidos.
+
+Fonte:
+Ataque hacker no maior banco da China pode ter impactado Tesouro dos EUA
+
+Juliana Liuda
+CNN, Hong Kong
