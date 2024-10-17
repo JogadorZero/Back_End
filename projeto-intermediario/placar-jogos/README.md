@@ -67,9 +67,29 @@ docker-compose up
 ### 4. Testar os endpoints
 Utilize ferramentas como Insomnia ou Postman para testar as requisições à API.
 
-Exemplo de requisição GET no Insomnia
+---
+
+## Endpoints
+
+### 1. `placar/jogos`
+Retorna tofos os jogos sendo transmitidos em tempo real ao redor do mundo.
 - **Método:** **GET**
 - **URL:** `http://localhost:8080/placar/jogos`
+
+### 2. `placar/sobre`
+Retorna as informações sobre o projeto.
+- **Método:** **GET**
+- **URL:** `http://localhost:8080/placar/sobre`
+
+---
+
+## Pesquisando campeonatos
+É possível pesquisar um campeonato específico pelo seu nome.
+### 1. `placar/jogos?campeonato=NOMEDOCAMPEONATO`
+Retorna todos os jogos sendo transmitidos em tempo real, de acordo com o campeonato pesquisado.
+- **Método:** **GET**
+- **Exemplo**
+  - **URL:** `http://localhost:8080/placar/jogos?campeonato=brasileirao`
 
 ---
 

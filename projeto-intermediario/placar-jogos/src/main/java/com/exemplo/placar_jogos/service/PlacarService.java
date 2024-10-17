@@ -10,11 +10,22 @@ import org.springframework.http.ResponseEntity;
 @Service
 public class PlacarService {
 
-    private static final String API_URL = "https://sofascore.p.rapidapi.com/tournaments/get-live-events?sport=football";
+    private static final String API_SEARCH_URL = "https://sofascore.p.rapidapi.com/search?q=";
     private static final String API_HOST = "sofascore.p.rapidapi.com";
     private static final String API_KEY = "660cb15b8emsh2dc778c7a8ebab1p13a0e0jsna2d62aab87c6";
 
     public String getJogosBrasileiros() {
+        // Chamando o método original para obter jogos brasileiros
+        return makeApiRequest("https://sofascore.p.rapidapi.com/tournaments/get-live-events?sport=football");
+    }
+
+    public String getJogosPorCampeonato(String campeonato) {
+        // Monta a URL de busca com o nome do campeonato
+        String apiUrlComCampeonato = API_SEARCH_URL + campeonato + "&type=all&page=0";
+        return makeApiRequest(apiUrlComCampeonato);
+    }
+
+    private String makeApiRequest(String url) {
         try {
             RestTemplate restTemplate = new RestTemplate();
             HttpHeaders headers = new HttpHeaders();
@@ -23,10 +34,9 @@ public class PlacarService {
 
             HttpEntity<String> entity = new HttpEntity<>(headers);
 
-            // Fazendo a requisição GET à API SofaScore
-            ResponseEntity<String> response = restTemplate.exchange(API_URL, HttpMethod.GET, entity, String.class);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 
-            return response.getBody();  // Retorna o JSON dos jogos brasileiros
+            return response.getBody();
         } catch (Exception e) {
             return "Erro ao obter os jogos: " + e.getMessage();
         }
